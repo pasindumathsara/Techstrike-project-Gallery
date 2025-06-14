@@ -1,29 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import Header from './components/Header';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+const events = [
+  { title: 'Robotics Workshop', year: 2023 },
+  { title: 'AI Meetup', year: 2023 },
+  { title: 'Coding Competition', year: 2022 },
+  { title: 'Tech Talk', year: 2022 },
+  { title: 'Hardware Hackathon', year: 2021 },
+  { title: 'Software Showcase', year: 2021 },
+];
+
+const App = () => {
+  const [search, setSearch] = useState('');
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-
-
-      <h1>Pasindu Mathsara</h1>
-    
+    <div className="min-h-screen bg-[#0f111a] text-white font-sans">
+      <Header />
 
       
-    </>
-  )
-}
+     
+    </div>
+  );
+};
 
-export default App
+export default App;
